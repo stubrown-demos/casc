@@ -34,7 +34,6 @@ jenkins:
   scmCheckoutRetryCount: 0
   securityRealm: "operationsCenter"
   slaveAgentPort: 50000
-  systemMessage: "CasC is enabled"
   updateCenter:
     sites:
       - id: "core-mm-offline"
@@ -93,14 +92,14 @@ unclassified:
   gitHubConfiguration:
     apiRateLimitChecker: ThrottleForNormalize
   gitHubPluginConfig:
-    hookUrl: "https://core.stubrowntest.flow-training.beescloud.com/m7/github-webhook/"
+    hookUrl: "https://core.stubrowntest.flow-training.beescloud.com/master1/github-webhook/"
   gitSCM:
     createAccountBasedOnEmail: false
     showEntireCommitSummaryInChanges: false
     useExistingAccountWithSameEmail: false
   location:
     adminAddress: "address not configured yet <nobody@nowhere>"
-    url: "https://core.stubrowntest.flow-training.beescloud.com/m7/"
+    url: "https://core.stubrowntest.flow-training.beescloud.com/master1/"
   mailer:
     charset: "UTF-8"
     useSsl: false
