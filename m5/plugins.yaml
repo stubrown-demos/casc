@@ -1,5 +1,6 @@
 plugins:
   - {id: blueocean-commons}
+  - {id: blueocean}
   - {id: script-security}
   - {id: workflow-step-api}
   - {id: display-url-api}
