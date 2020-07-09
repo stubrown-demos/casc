@@ -92,14 +92,14 @@ unclassified:
   gitHubConfiguration:
     apiRateLimitChecker: ThrottleForNormalize
   gitHubPluginConfig:
-    hookUrl: "https://core.stubrowntest.flow-training.beescloud.com/m3/github-webhook/"
+    hookUrl: "https://core.stubrowntest.flow-training.beescloud.com/stusmaster/github-webhook/"
   gitSCM:
     createAccountBasedOnEmail: false
     showEntireCommitSummaryInChanges: false
     useExistingAccountWithSameEmail: false
   location:
     adminAddress: "address not configured yet <nobody@nowhere>"
-    url: "https://core.stubrowntest.flow-training.beescloud.com/m3/"
+    url: "https://core.stubrowntest.flow-training.beescloud.com/stusmaster/"
   mailer:
     charset: "UTF-8"
     useSsl: false
