@@ -1,0 +1,12 @@
+type: plugin-catalog
+version: '1'
+name: gen-01
+displayName: gen-01
+configurations:
+  - description: gen-01
+    includePlugins:
+      greenballs: {groupId: org.jenkins-ci.plugins, version: '1.15'}
+      beer: {version: '1.2'}
+      devoptics: {version: '1.1905'}
+settings:
+  repository: {layout: maven2, url: 'https://repo.jenkins-ci.org/releases/'}
