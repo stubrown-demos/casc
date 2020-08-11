@@ -1,0 +1,4 @@
+jenkins:
+  systemMessage: "Jenkins configured using CasC."
+  numExecutors: 0
+  mode: NORMAL

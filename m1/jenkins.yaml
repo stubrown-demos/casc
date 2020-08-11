@@ -1,12 +1,3 @@
-credentials:
-  system:
-    domainCredentials:
-      - credentials:
-          - usernamePassword:
-              id: "githubcreds"
-              password: "{AQAAABAAAAAwz5DfT7uP4RplghLtotSvVFnejTOKQkiTUZ7QVUPKQZFCrErBxvqdpWEdFrRWlbyPLM/ltHce6aIZ9CggDld2mg==}"
-              scope: GLOBAL
-              username: "stubrown-demos"
 jenkins:
   agentProtocols:
     - "Diagnostic-Ping"
@@ -19,7 +10,6 @@ jenkins:
   disableRememberMe: false
   disabledAdministrativeMonitors:
     - "com.cloudbees.jenkins.support.impl.cloudbees.TcpSlaveAgentListenerMonitor"
-    - "GitHubHookRegisterProblemMonitor"
   labelAtoms:
     - name: "master"
   markupFormatter: "plainText"
@@ -36,10 +26,12 @@ jenkins:
   scmCheckoutRetryCount: 0
   securityRealm: "operationsCenter"
   slaveAgentPort: 50000
-  systemMessage: "Configured using casc"
+  systemMessage: "Configured to use CasC"
   updateCenter:
     sites:
-      - id: "virtual-cap-core-mm"
+      - id: "core-mm-offline"
+        url: "file:/tmp/jenkins/war/WEB-INF/plugins/update-center.json"
+      - id: "cap-core-mm"
         url: "https://jenkins-updates.cloudbees.com/update-center/envelope-core-mm/update-center.json"
   views:
     - all:
@@ -52,14 +44,7 @@ advisor:
     - "stu@foo.com"
   email: "sbrown@cloudbees.com"
   excludedComponents:
-    - "GCLogs"
-    - "Agents"
-    - "AgentsConfigFile"
-    - "ConfigFileComponent"
-    - "RootCAs"
-    - "SlaveLogs"
-    - "OtherConfigFilesComponent"
-    - "HeapUsageHistogram"
+    - "SENDALL"
   nagDisabled: true
 beekeeper:
   enabled: true
@@ -97,8 +82,6 @@ unclassified:
           unbuilt: true
           unstable: true
       - "projectEnabledHealthMetric"
-  devOpticsConfiguration:
-    completionStrategy: AUTOMATIC
   experimentalPlugins:
     enabled: false
   extendedEmailPublisher:
@@ -118,15 +101,12 @@ unclassified:
     watchingEnabled: false
   gitHubConfiguration:
     apiRateLimitChecker: ThrottleForNormalize
-  gitHubPluginConfig:
-    hookUrl: "https://core.general.flow-training.beescloud.com/m1/github-webhook/"
   gitSCM:
     createAccountBasedOnEmail: false
     showEntireCommitSummaryInChanges: false
     useExistingAccountWithSameEmail: false
   location:
     adminAddress: "sbrown@cloudbees.com"
-    url: "https://core.general.flow-training.beescloud.com/m1/"
   mailer:
     charset: "UTF-8"
     useSsl: false
