@@ -1,6 +1,6 @@
 type: plugin-catalog
 version: '1'
-name: gen-01
+name: master1
 displayName: gen-01
 configurations:
   - description: gen-01
