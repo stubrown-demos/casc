@@ -1,5 +1,5 @@
 type: plugin-catalog
-version: '2'
+version: '1'
 name: gen-01
 displayName: gen-01
 configurations:
