@@ -32,9 +32,7 @@ jenkins:
   systemMessage: "Configured to use CasC"
   updateCenter:
     sites:
-      - id: "core-mm-offline"
-        url: "file:/tmp/jenkins/war/WEB-INF/plugins/update-center.json"
-      - id: "cap-core-mm"
+      - id: "virtual-cap-core-mm"
         url: "https://jenkins-updates.cloudbees.com/update-center/envelope-core-mm/update-center.json"
   views:
     - all:
@@ -75,6 +73,27 @@ unclassified:
       - "projectEnabledHealthMetric"
   experimentalPlugins:
     enabled: false
+  extendedEmailPublisher:
+    adminRequiredForTemplateTesting: false
+    allowUnregisteredEnabled: false
+    charset: "UTF-8"
+    debugMode: false
+    defaultBody: |-
+      $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
+
+      Check console output at $BUILD_URL to view the results.
+    defaultSubject: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!"
+    maxAttachmentSize: -1
+    maxAttachmentSizeMb: 0
+    precedenceBulk: false
+    useSsl: false
+    watchingEnabled: false
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitSCM:
+    createAccountBasedOnEmail: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
   location:
     adminAddress: "address not configured yet <nobody@nowhere>"
   mailer:
@@ -85,3 +104,8 @@ unclassified:
     pollingThreadCount: 10
   usageStatisticsCloudBees:
     usageStatisticsCollected: true
+tool:
+  git:
+    installations:
+      - home: "git"
+        name: "Default"
