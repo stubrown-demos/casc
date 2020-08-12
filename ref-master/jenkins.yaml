@@ -29,7 +29,7 @@ jenkins:
   scmCheckoutRetryCount: 0
   securityRealm: "operationsCenter"
   slaveAgentPort: 50000
-  systemMessage: "original config"
+  systemMessage: "casc config"
   updateCenter:
     sites:
       - id: "core-mm-offline"
