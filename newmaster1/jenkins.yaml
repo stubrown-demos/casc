@@ -46,6 +46,19 @@ beekeeper:
   upgrades:
     autoDowngradePlugins: false
     autoUpgradePlugins: false
+advisor:
+  acceptToS: true
+  email: "sbrown@cloudbees.com"
+  excludedComponents:
+    - "GCLogs"
+    - "Agents"
+    - "AgentsConfigFile"
+    - "ConfigFileComponent"
+    - "RootCAs"
+    - "SlaveLogs"
+    - "OtherConfigFilesComponent"
+    - "HeapUsageHistogram"
+  nagDisabled: false
 security:
   anonymizeSupportBundle:
     enabled: false
