@@ -1,3 +1,91 @@
 jenkins:
-  systemMessage: "casc config"
-  
+  agentProtocols:
+    - "Diagnostic-Ping"
+    - "JNLP4-connect"
+    - "OperationsCenter2"
+    - "Ping"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  disabledAdministrativeMonitors:
+    - "com.cloudbees.jenkins.support.impl.cloudbees.TcpSlaveAgentListenerMonitor"
+  labelAtoms:
+    - name: "master"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  numExecutors: 0
+  primaryView:
+    all:
+      name: "all"
+  projectNamingStrategy: "standard"
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: false
+  scmCheckoutRetryCount: 0
+  securityRealm: "operationsCenter"
+  slaveAgentPort: 50000
+  updateCenter:
+    sites:
+      - id: "core-mm-offline"
+        url: "file:/tmp/jenkins/war/WEB-INF/plugins/update-center.json"
+      - id: "cap-core-mm"
+        url: "https://jenkins-updates.cloudbees.com/update-center/envelope-core-mm/update-center.json"
+  views:
+    - all:
+        name: "all"
+  viewsTabBar: "standard"
+beekeeper:
+  enabled: true
+  securityWarnings:
+    enabledForCore: true
+    enabledForPlugins: true
+  upgrades:
+    autoDowngradePlugins: false
+    autoUpgradePlugins: false
+security:
+  anonymizeSupportBundle:
+    enabled: false
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  sSHD:
+    port: -1
+unclassified:
+  buildDiscarders:
+    configuredBuildDiscarders:
+      - "jobBuildDiscarder"
+  defaultFolderConfiguration:
+    healthMetrics:
+      - worstChildHealthMetric:
+          recursive: true
+      - "averageChildHealthMetric"
+      - jobStatusHealthMetric:
+          countVirginJobs: false
+          failure: true
+          success: true
+          unbuilt: true
+          unstable: true
+      - "projectEnabledHealthMetric"
+  experimentalPlugins:
+    enabled: false
+  location:
+    adminAddress: "address not configured yet <nobody@nowhere>"
+    url: "https://core.general.flow-training.beescloud.com/ref-master/"
+  mailer:
+    charset: "UTF-8"
+    useSsl: false
+    useTls: false
+  operationsCenterRootAction:
+    connectionDetails: "----- BEGIN CONNECTION DETAILS -----\nH4sIAAAAAAAAAB3KSQ4CIRAF0LvU2oKGkI7p28CvaoegGAY3xrtLu315H7rU+Oy0kQ9pByDsIcrB\r\
+      \nw3FcE3h1YTkHdUFE6UQ3mXfhqjs/Yutap42aJ157f23W4l5gkMuQpNoYpapp74PG0U0uiPm/LH1/\r\
+      \ndLZNAX8AAAA=\r\n----- END CONNECTION DETAILS -----\n"
+  pollSCM:
+    pollingThreadCount: 10
+  usageStatisticsCloudBees:
+    usageStatisticsCollected: true
